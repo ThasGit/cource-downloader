@@ -1,0 +1,19 @@
+<configuration>
+    <property name="LOG_HOME" value="${user.home}/logs/cource-downloader"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>　
+            <!--            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>-->
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:%line - %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+
+    <include resource="logback-m3u8.xml"/>
+    <include resource="logback-http.xml"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+    content-type: text/html
+    charset: UTF-8
+    settings:
+      number_format: '0.##'
+  mvc:
+    view:
+      suffix: .html
+  web.cor
